@@ -99,6 +99,42 @@ export const projects: Project[] = [
       "Created intuitive dashboard for HR management",
     ],
   },
+  {
+    id: "cloudhouse",
+    name: "CloudHouse",
+    description:
+      "Doctor task management and billing system designed to streamline healthcare administrative workflows.",
+    techStack: ["HTML5", "CSS3", "Bootstrap", "jQuery"],
+    highlights: [
+      "Developed doctor task management and billing system",
+      "Built responsive UI with improved usability",
+      "Implemented dynamic task workflows and billing features",
+    ],
+  },
+  {
+    id: "photobash",
+    name: "Photobash",
+    description:
+      "Photo selling web platform enabling photographers to showcase and monetize their work online.",
+    techStack: ["Angular", "HTML5", "CSS3", "Bootstrap"],
+    highlights: [
+      "Built photo selling web platform",
+      "Implemented Angular-based UI and frontend enhancements",
+      "Developed responsive gallery and checkout features",
+    ],
+  },
+  {
+    id: "urstore",
+    name: "URstore",
+    description:
+      "eCommerce platform for custom apparel allowing users to design and purchase personalized clothing.",
+    techStack: ["HTML5", "CSS3", "Bootstrap", "CodeIgniter"],
+    highlights: [
+      "Developed eCommerce platform for custom apparel",
+      "Implemented UI/UX improvements and frontend theme integration",
+      "Built product customization and cart functionality",
+    ],
+  },
 ];
 
 export const skills: Skill[] = [

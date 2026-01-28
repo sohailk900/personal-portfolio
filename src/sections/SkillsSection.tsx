@@ -14,10 +14,10 @@ const categoryIcons: Record<SkillCategory, typeof Code2> = {
 };
 
 const categoryColors: Record<SkillCategory, string> = {
-  frontend: "text-primary",
-  ui: "text-accent",
-  tools: "text-emerald-500",
-  concepts: "text-amber-500",
+  frontend: "text-foreground",
+  ui: "text-muted-foreground",
+  tools: "text-foreground",
+  concepts: "text-muted-foreground",
 };
 
 export function SkillsSection() {

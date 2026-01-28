@@ -33,8 +33,8 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-card"
-          : "bg-transparent"
+          ? "bg-background/100 border-b border-border shadow-card"
+          : "bg-background/100"
       )}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -11,6 +11,7 @@ import { personalInfo, socialLinks } from "@/data/portfolio";
 interface FormData {
   name: string;
   email: string;
+  mobile: string;
   subject: string;
   message: string;
 }
@@ -18,6 +19,7 @@ interface FormData {
 interface FormErrors {
   name?: string;
   email?: string;
+  mobile?: string;
   subject?: string;
   message?: string;
 }
@@ -27,6 +29,7 @@ export function ContactSection() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
+    mobile: "",
     subject: "",
     message: "",
   });
@@ -48,6 +51,12 @@ export function ContactSection() {
       newErrors.email = "Please enter a valid email";
     }
 
+    if (!formData.mobile.trim()) {
+      newErrors.mobile = "Mobile number is required";
+    } else if (!/^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{1,9}$/.test(formData.mobile)) {
+      newErrors.mobile = "Please enter a valid mobile number";
+    }
+
     if (!formData.subject.trim()) {
       newErrors.subject = "Subject is required";
     } else if (formData.subject.length > 200) {
@@ -64,7 +73,7 @@ export function ContactSection() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!validateForm()) return;
@@ -72,14 +81,20 @@ export function ContactSection() {
     setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const formData = new FormData(e.target as HTMLFormElement);
+    formData.append("access_key", "178491a6-ea42-4223-b68c-7a561fd02317");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
 
     toast({
       title: "Message sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
 
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({ name: "", email: "", mobile: "", subject: "", message: "" });
     setIsSubmitting(false);
   };
 
@@ -232,6 +247,26 @@ export function ContactSection() {
             </div>
 
             <div className="space-y-2">
+              <Label htmlFor="mobile">Mobile Number</Label>
+              <Input
+                id="mobile"
+                name="mobile"
+                type="tel"
+                value={formData.mobile}
+                onChange={handleChange}
+                placeholder="+91 22-2222-2222"
+                className={errors.mobile ? "border-destructive" : ""}
+                aria-invalid={!!errors.mobile}
+                aria-describedby={errors.mobile ? "mobile-error" : undefined}
+              />
+              {errors.mobile && (
+                <p id="mobile-error" className="text-sm text-destructive">
+                  {errors.mobile}
+                </p>
+              )}
+            </div>
+
+            <div className="space-y-2">
               <Label htmlFor="subject">Subject</Label>
               <Input
                 id="subject"
@@ -257,7 +292,7 @@ export function ContactSection() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell me about your project..."
+                placeholder="Please write your message here..."
                 rows={5}
                 className={errors.message ? "border-destructive" : ""}
                 aria-invalid={!!errors.message}
