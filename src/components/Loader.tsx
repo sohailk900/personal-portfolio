@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 interface LoaderProps {
   onLoadComplete?: () => void;
@@ -39,7 +40,7 @@ export function Loader({ onLoadComplete, minDuration = 2000 }: LoaderProps) {
       {/* Animated Logo */}
       <div className="relative mb-8">
         <div className="w-24 h-16 rounded-xl flex items-center justify-center animate-pulse">
-          <img src="src/assets/logo.png" alt="" />
+          <img src={logo} alt="" />
         </div>
 
         {/* Orbiting dots */}

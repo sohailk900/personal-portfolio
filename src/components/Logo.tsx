@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 interface LogoProps {
   className?: string;
@@ -20,7 +21,7 @@ export function Logo({ className, size = "md" }: LogoProps) {
         className
       )}
     >
-      <img src="src/assets/logo.png" alt="" />
+      <img src={logo} alt="" />
     </div>
   );
 }
