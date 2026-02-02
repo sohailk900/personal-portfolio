@@ -22,7 +22,7 @@ export function HeroSection() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden md:mb-0 !pb-10 !pt-10"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0">
@@ -48,7 +48,7 @@ export function HeroSection() {
           )}
         >
           {/* Content */}
-          <div className="flex-1 text-center lg:text-left">
+          <div className="flex-1 text-center lg:text-left ">
             <p className="text-primary font-medium mb-4 tracking-wider uppercase">
               Hello, I'm
             </p>
@@ -85,7 +85,7 @@ export function HeroSection() {
           </div>
 
           {/* Profile Image */}
-          <div className="relative flex-shrink-0">
+          <div className="relative flex-shrink-0 block md:hidden ">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl opacity-30 animate-pulse-slow" />
@@ -106,7 +106,7 @@ export function HeroSection() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce lg:block hidden">
           <button
             onClick={() => scrollToSection("about")}
             className="p-2 rounded-full border border-primary/30 hover:border-primary transition-colors"

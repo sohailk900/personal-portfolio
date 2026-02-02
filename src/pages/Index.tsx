@@ -20,7 +20,7 @@ const Index = () => {
       <MainLayout>
         <ScrollProgress />
         <Header />
-        <main>
+        <main className="pt-16">
           <HeroSection />
           <AboutSection />
           <SkillsSection />
