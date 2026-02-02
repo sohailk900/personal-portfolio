@@ -86,6 +86,7 @@ export const projects: Project[] = [
       "Contributed to frontend development using React.js",
       "Implemented component-based architecture for scalability",
     ],
+    liveUrl: "https://www.jobcheck.org.nz",
   },
   {
     id: "debriefing",
@@ -98,6 +99,7 @@ export const projects: Project[] = [
       "Implemented responsive UI and reusable React components",
       "Created intuitive dashboard for HR management",
     ],
+
   },
   {
     id: "cloudhouse",
@@ -122,6 +124,7 @@ export const projects: Project[] = [
       "Implemented Angular-based UI and frontend enhancements",
       "Developed responsive gallery and checkout features",
     ],
+    liveUrl: "https://www.photobash.org/",
   },
   {
     id: "urstore",
@@ -134,6 +137,7 @@ export const projects: Project[] = [
       "Implemented UI/UX improvements and frontend theme integration",
       "Built product customization and cart functionality",
     ],
+    liveUrl: "https://urstore.ca",
   },
 ];
 
