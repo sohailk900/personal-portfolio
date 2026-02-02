@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import { ArrowDown, Download, ExternalLink } from "lucide-react";
+import { ArrowDown, ExternalLink, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { personalInfo } from "@/data/portfolio";
+import resume from "@/assets/resume_sohail.pdf";
 import { scrollToSection } from "@/utils/helpers";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { cn } from "@/lib/utils";
@@ -13,7 +14,8 @@ export function HeroSection() {
   const isVisible = useIntersectionObserver(ref, { threshold: 0.1 });
 
   const handleDownloadResume = () => {
-    window.open("/resume.pdf", "_blank");
+    //view in new tab
+    window.open(resume, "_blank");
   };
 
   return (
@@ -67,8 +69,8 @@ export function HeroSection() {
                 onClick={handleDownloadResume}
                 className="bg-gradient-primary hover:opacity-90 transition-opacity glow-primary group"
               >
-                <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                Download Resume
+                <Eye className="mr-2 h-5 w-5 " />
+                View Resume
               </Button>
               <Button
                 size="lg"
@@ -87,7 +89,7 @@ export function HeroSection() {
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl opacity-30 animate-pulse-slow" />
-              
+
               {/* Image Container */}
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/30 shadow-elevated">
                 <img
