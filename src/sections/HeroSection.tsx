@@ -22,7 +22,7 @@ export function HeroSection() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden md:mb-0 !pb-10 !pt-10"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden md:mb-0 !py-16"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0">
