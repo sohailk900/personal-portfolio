@@ -85,7 +85,7 @@ export function HeroSection() {
           </div>
 
           {/* Profile Image */}
-          <div className="relative flex-shrink-0 block md:hidden ">
+          <div className="relative flex-shrink-0 lg:block hidden ">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl opacity-30 animate-pulse-slow" />
