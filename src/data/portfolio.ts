@@ -10,9 +10,9 @@ export const personalInfo: PersonalInfo = {
   linkedin: "https://www.linkedin.com/in/sohail-professional",
   github: "https://github.com/sohail-khan",
   summary:
-    "Front-End Developer with 8+ years of professional experience, including 5+ years in React.js, building production-grade web applications using JavaScript (ES6+) and TypeScript. Specialized in scalable component architecture, Redux/Redux Toolkit, API and AI API integration, and frontend performance optimization. Experienced in leading frontend modules, mentoring developers, and coordinating cross-functional Agile/Scrum teams.",
+    "Front-End Developer with 7+ years of professional experience, including 4+ years in React.js, building production-grade web applications using JavaScript (ES6+) and TypeScript. Specialized in scalable component architecture, Redux/Redux Toolkit, API and AI API integration, and frontend performance optimization. Experienced in leading frontend modules, mentoring developers, and coordinating cross-functional Agile/Scrum teams.",
   about: [
-    "8+ years of professional experience, including 5+ years in React.js",
+    "7+ years of professional experience, including 4+ years in React.js",
     "Expert in Redux & Redux Toolkit for state management",
     "Strong TypeScript skills for type-safe applications",
     "Proficient in REST, Third-Party, and AI API integrations",
@@ -71,19 +71,19 @@ export const experiences: Experience[] = [
       "Optimized UI behavior and cross-browser compatibility",
     ],
   },
-  {
-    id: "indianlancer",
-    company: "Indianlancer Software Company",
-    role: "UI Developer",
-    duration: "Apr 2017 — Apr 2018",
-    techStack: ["HTML5", "CSS3", "JavaScript", "jQuery"],
-    responsibilities: [
-      "Developed responsive web interfaces using HTML5, CSS3, JavaScript, and jQuery",
-      "Converted UI designs into production-ready web pages",
-      "Implemented API-driven UI interactions",
-      "Debugged and optimized frontend code for performance and stability",
-    ],
-  },
+  // {
+  //   id: "indianlancer",
+  //   company: "Indianlancer Software Company",
+  //   role: "UI Developer",
+  //   duration: "Apr 2017 — Apr 2018",
+  //   techStack: ["HTML5", "CSS3", "JavaScript", "jQuery"],
+  //   responsibilities: [
+  //     "Developed responsive web interfaces using HTML5, CSS3, JavaScript, and jQuery",
+  //     "Converted UI designs into production-ready web pages",
+  //     "Implemented API-driven UI interactions",
+  //     "Debugged and optimized frontend code for performance and stability",
+  //   ],
+  // },
 ];
 
 export const projects: Project[] = [
