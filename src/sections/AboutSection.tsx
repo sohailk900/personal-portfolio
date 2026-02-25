@@ -5,7 +5,7 @@ import { personalInfo } from "@/data/portfolio";
 const highlights = [
   {
     icon: Code2,
-    title: "4+ Years React.js",
+    title: "5+ Years React.js",
     description: "Building scalable applications",
   },
   {
