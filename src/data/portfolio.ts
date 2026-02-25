@@ -10,9 +10,9 @@ export const personalInfo: PersonalInfo = {
   linkedin: "https://www.linkedin.com/in/sohail-professional",
   github: "https://github.com/sohail-khan",
   summary:
-    "Front-End Developer with 7+ years of professional experience, including 4+ years in React.js, building production-grade web applications using JavaScript (ES6+) and TypeScript. Specialized in scalable component architecture, Redux/Redux Toolkit, API and AI API integration, and frontend performance optimization. Experienced in leading frontend modules, mentoring developers, and coordinating cross-functional Agile/Scrum teams.",
+    "Front-End Developer with 8+ years of professional experience, including 5+ years in React.js, building production-grade web applications using JavaScript (ES6+) and TypeScript. Specialized in scalable component architecture, Redux/Redux Toolkit, API and AI API integration, and frontend performance optimization. Experienced in leading frontend modules, mentoring developers, and coordinating cross-functional Agile/Scrum teams.",
   about: [
-    "7+ years of professional experience, including 4+ years in React.js",
+    "8+ years of professional experience, including 5+ years in React.js",
     "Expert in Redux & Redux Toolkit for state management",
     "Strong TypeScript skills for type-safe applications",
     "Proficient in REST, Third-Party, and AI API integrations",
