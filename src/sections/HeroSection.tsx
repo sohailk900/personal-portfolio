@@ -14,8 +14,12 @@ export function HeroSection() {
   const isVisible = useIntersectionObserver(ref, { threshold: 0.1 });
 
   const handleDownloadResume = () => {
-    //view in new tab
-    window.open(resume, "_blank");
+    // i want download resume in pdf format
+    const link = document.createElement("a");
+    link.href = resume;
+    link.download = "resume_sohail.pdf";
+    link.click();
+    link.remove();
   };
 
   return (
@@ -70,7 +74,7 @@ export function HeroSection() {
                 className="bg-gradient-primary hover:opacity-90 transition-opacity glow-primary group"
               >
                 <Eye className="mr-2 h-5 w-5 " />
-                View Resume
+                Download Resume
               </Button>
               <Button
                 size="lg"
